@@ -23,6 +23,7 @@ cmake --build build --parallel
 description = "nodejsでテストを実行する."
 script = [
 '''
+cmake --build build --parallel
 node ./build/tests.js
 '''
 ]
