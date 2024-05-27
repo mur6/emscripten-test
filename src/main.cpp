@@ -1,7 +1,16 @@
-#include <iostream>
+#include <cstdio>
 
 int main()
 {
-    std::cout << "Hello, Wasm!!" << std::endl;
+    try
+    {
+        puts("throw...");
+        throw 1;
+        puts("(never reached)");
+    }
+    catch (...)
+    {
+        puts("catch!");
+    }
     return 0;
 }

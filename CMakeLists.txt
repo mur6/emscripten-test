@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 3.29)
 project(tests)
 
+# set compiler flags
+# set(CMAKE_CXX_STANDARD 17)
+# set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fexceptions")
+
 Include(FetchContent)
 
 FetchContent_Declare(
@@ -22,4 +28,5 @@ add_executable(tests tests/test.cpp)
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
 
 # Build main
+# add_compile_options("SHELL:-s NO_DISABLE_EXCEPTION_CATCHING=0")
 add_executable(main src/main.cpp)
