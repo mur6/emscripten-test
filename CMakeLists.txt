@@ -20,3 +20,6 @@ endif()
 # These tests can use the Catch2-provided main
 add_executable(tests tests/test.cpp)
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
+
+# Build main
+add_executable(main src/main.cpp)

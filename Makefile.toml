@@ -28,6 +28,15 @@ node ./build/tests.js
 '''
 ]
 
+[tasks.run-test]
+description = "nodejsでmainを実行する."
+script = [
+'''
+cmake --build build --parallel
+node ./build/main.js
+'''
+]
+
 [tasks.default]
 description = "display help message"
 script = [
