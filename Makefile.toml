@@ -27,3 +27,11 @@ cmake --build build --parallel
 node ./build/tests.js
 '''
 ]
+
+[tasks.default]
+description = "display help message"
+script = [
+'''
+makers --list-all-steps
+'''
+]
