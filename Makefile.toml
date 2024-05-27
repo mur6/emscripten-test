@@ -28,7 +28,7 @@ node ./build/tests.js
 '''
 ]
 
-[tasks.run-test]
+[tasks.run-main]
 description = "nodejsでmainを実行する."
 script = [
 '''
