@@ -1,0 +1,28 @@
+[config]
+skip_core_tasks = true
+
+[tasks.pre-build]
+description = "buildディレクトリを作成し直す"
+script = [
+'''
+rm -rf build
+mkdir build
+'''
+]
+
+[tasks.build]
+description = "cmake with emscripten, そしてビルドも行う."
+script = [
+'''
+emcmake cmake -B build -S .
+cmake --build build --parallel
+'''
+]
+
+[tasks.run-test]
+description = "nodejsでテストを実行する."
+script = [
+'''
+node ./build/tests.js
+'''
+]
