@@ -14,7 +14,7 @@ endif()
 #     set(CMAKE_EXECUTABLE_SUFFIX ".html")
 # endif()
 
-add_executable(main main.cpp)
+add_executable(main src/main.cpp)
 
 if (SUPPORT_OPENCCV)
     include_directories(
